@@ -19,12 +19,8 @@ bool MainScene::init()
 
 
     tileMap = new ax::FastTMXTiledMap();
-
-    tileMap->initWithTMXFile("tilesets/myOtherTilemap.tmx");    // THIS WORKS, because myOtherTilemap.tmx is the same folder than the tileset myTileset.tsx
-
-    // Comment line above and uncomment the line below to see the error
-    //tileMap->initWithTMXFile("tilemaps/myTilemap.tmx");       // THIS ERRORS, because myOtherTilemap.tmx is not in the same folder than the tileset myTileset.tsx
-
+    tileMap->initWithTMXFile("tilemaps/myTilemap.tmx");
+    tileMap->setTileAnimEnabled(true);
     addChild(tileMap);
 
 
@@ -39,6 +35,5 @@ bool MainScene::init()
 
 void MainScene::update(float delta)
 {
-    
 
 }
